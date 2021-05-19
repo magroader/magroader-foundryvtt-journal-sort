@@ -1,4 +1,4 @@
-# MagRoader's Journal Sorting
+# Mag Roader's Journal Sorting
 
 Allows for better sorting of Journal directories (or any auto-sorted directory, really) for strings that contain numbers.
 
