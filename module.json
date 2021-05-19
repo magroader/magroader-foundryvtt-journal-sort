@@ -1,0 +1,15 @@
+{   
+    "name": "magroader-foundryvtt-journal-sort",   
+    "title": "MagRoader's Journal Sorting",   
+    "description": "Allows for better automated sorting of the Journal by using numbers instead of strings when a number is found in a string.",
+    "author": "Mag Roader",
+    "version": "0.0.9",
+    "minimumCoreVersion": "0.7.9",
+    "compatibleCoreVersion":"0.7.9",
+    "url": "https://github.com/magroader/magroader-foundryvtt-journal-sort",
+    "manifest": "https://raw.githubusercontent.com/magroader/magroader-foundryvtt-journal-sort/main/module.json",
+    "download": "https://github.com/magroader/magroader-foundryvtt-journal-sort/archive/refs/heads/main.zip",
+    "scripts": [
+        "scripts/journal-sort.js"
+    ]
+  }
