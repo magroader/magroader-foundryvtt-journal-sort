@@ -3,12 +3,12 @@
     "title": "Mag Roader's Journal Sorting",   
     "description": "Allows for better sorting of directories by using numbers instead of strings when a number is found in a string.",
     "author": "Mag Roader",
-    "version": "1.0.0",
-    "minimumCoreVersion": "0.7.9",
-    "compatibleCoreVersion":"0.7.9",
+    "version": "1.1.0",
+    "minimumCoreVersion": "0.8.6",
+    "compatibleCoreVersion":"0.8.6",
     "url": "https://github.com/magroader/magroader-foundryvtt-journal-sort",
     "manifest": "https://raw.githubusercontent.com/magroader/magroader-foundryvtt-journal-sort/main/module.json",
-    "download": "https://github.com/magroader/magroader-foundryvtt-journal-sort/archive/refs/tags/1.0.0.zip",
+    "download": "https://github.com/magroader/magroader-foundryvtt-journal-sort/archive/refs/tags/1.1.0.zip",
     "scripts": [
         "scripts/journal-sort.js"
     ]

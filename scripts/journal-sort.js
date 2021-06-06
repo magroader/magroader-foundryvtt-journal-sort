@@ -78,26 +78,28 @@ Hooks.on("ready", function() {
         return a.localeCompare(b)
     }
 
-    // NOTE: This is the function as defined here:
-    //   https://foundryvtt.com/api/foundry.js.html
-    // for FoundryVTT 0.7.9
-    SidebarDirectory._populate = function(folder, folders, entities, {allowChildren=true}={}) {
-        const id = folder._id;
+    // NOTE: This is the function as defined in foundry.js in FoundryVTT 0.8.6
+    SidebarDirectory._populate = function(folder, folders, documents, {allowChildren=true}={}) {
+        const id = folder.id;
+    
         // Define sorting function for this folder
         const alpha = folder.data?.sorting === "a";
         // ** BEGIN CHANGES **
 //      const s = alpha ? (a, b) => a.name.localeCompare(b.name) : (a, b) => a.data.sort - b.data.sort;
         const s = alpha ? (a, b) => sortWithNumbers(a.name, b.name) : (a, b) => a.data.sort - b.data.sort;
         // ** END CHANGES **
+    
         // Partition folders into children and unassigned folders
         let [u, children] = folders.partition(f => allowChildren && (f.data.parent === id));
         folder.children = children.sort(s);
         folders = u;
-        // Partition entities into contents and unassigned entities
-        const [e, content] = entities.partition(e => e.data.folder === id);
+    
+        // Partition documents into contents and unassigned documents
+        const [docs, content] = documents.partition(e => e.data.folder === id);
         folder.content = content.sort(s);
-        entities = e;
+        documents = docs;
+    
         // Return the remainder
-        return [folders, entities];
-    }
+        return [folders, documents];
+      }
 });
